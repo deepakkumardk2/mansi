@@ -1,0 +1,285 @@
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom right, #c69fc6, #ffe7c6);
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+    background-attachment: fixed;
+}
+
+.birthday-container {
+    text-align: center;
+    background-color: #fce4ec;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Adjusted for mobile */
+    margin: 20px auto;
+}
+
+.birthday-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #e91e63;
+}
+
+.birthday-container h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem; /* Adjusted for mobile */
+    color: #ff4081;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.5rem; /* Scaled down for small screens */
+        margin-top: 15px;
+    }
+}
+
+@keyframes textAnimation {
+    from {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    to {
+        transform: scale(1.1);
+        color: #ffa502;
+        filter: brightness(1.3);
+    }
+}
+
+.balloons {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px; /* Scaled down for mobile */
+    height: 70px; /* Scaled down */
+    background-color: #e40f2f;
+    border-radius: 50% 50% 45% 45%;
+    animation: float 8s ease-in-out infinite;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    filter: brightness(1.2);
+}
+
+@media (max-width: 600px) {
+    .balloon {
+        width: 40px; /* Further scaling for small screens */
+        height: 60px;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-130vh) rotate(15deg);
+    }
+}
+
+.slider {
+    width: 100%;
+    max-width: 350px; /* Reduced size for mobile */
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date-container {
+    text-align: center;
+    background-color: #45caf2;
+    padding: 12px;
+    margin: 0 5%;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .date-container {
+        padding: 8px;
+        margin: 0 3%;
+    }
+}
+
+
+.birthday-container {
+    text-align: center;
+    background-color: #fce4ec;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Adjusted for mobile */
+    margin: 20px auto;
+    animation: textFadeIn 3s ease-in-out; /* Added fade-in animation */
+}
+
+/* Added keyframe animation for fading in the birthday message */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.birthday-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #e91e63;
+    margin-bottom: 10px;
+    animation: textAnimation 2s ease-in-out infinite alternate; /* Text animation */
+}
+
+.birthday-container h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem; /* Adjusted for mobile */
+    color: #ff4081;
+    animation: textAnimation 2s ease-in-out infinite alternate; /* Text animation */
+}
+
+@keyframes textAnimation {
+    from {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    to {
+        transform: scale(1.1);
+        color: #ffa502;
+        filter: brightness(1.3);
+    }
+}
+
+.balloons {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 80px;
+    height: 100px;
+    background-color: #e40f2f;
+    border-radius: 50% 50% 45% 45%;
+    animation: float 8s ease-in-out infinite;
+    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    filter: brightness(1.2);
+}
+
+.balloon::before {
+    content: '';
+    position: absolute;
+    bottom: -80px; /* Adjusted to lengthen the ribbon */
+    left: 50%;
+    width: 3px;
+    height: 80px;
+    background-color: #2f3640; /* Ribbon color */
+    transform: translateX(-50%);
+    animation: ribbonWave 2s ease-in-out infinite; /* Animation for ribbon */
+}
+
+/* Ribbon wave animation */
+@keyframes ribbonWave {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(10deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(-10deg);
+    }
+}
+
+/* Balloon animations */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-130vh) rotate(15deg);
+        opacity: 0;
+    }
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    background-color: #e90e2e;
+    animation-duration: 7s;
+}
+
+.balloon:nth-child(2) {
+    left: 22%;
+    background-color: #f0a61d;
+    animation-duration: 8s;
+}
+
+.balloon:nth-child(3) {
+    left: 35%;
+    background-color: #1e90ff;
+    animation-duration: 9s;
+}
+
+.balloon:nth-child(4) {
+    left: 47%;
+    background-color: #09de62;
+    animation-duration: 7.5s;
+}
+
+.balloon:nth-child(5) {
+    left: 58%;
+    background-color: #ff4757;
+    animation-duration: 6.8s;
+}
+
+.balloon:nth-child(6) {
+    left: 65%;
+    background-color: #ff6f61;
+    animation-duration: 7.2s;
+}
+
+.balloon:nth-child(7) {
+    left: 78%;
+    background-color: #f7b731;
+    animation-duration: 6.5s;
+}
+
+.balloon:nth-child(8) {
+    left: 88%;
+    background-color: #45aaf2;
+    animation-duration: 8.5s;
+}
+
+.balloon:nth-child(9) {
+    left: 95%;
+    background-color: #a55eea;
+    animation-duration: 9s;
+}

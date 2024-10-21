@@ -1,0 +1,167 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(241, 216, 182);
+
+
+}
+
+.h2 {
+    text-align: center;
+    background-color: rgb(47, 190, 164);
+    margin: 0 auto; 
+    width: 90%; 
+    border-radius: 19px;
+    padding: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .h2 {
+        width: 95%; 
+        font-size: 18px; 
+    }
+}
+
+.muskan{
+    text-align: center;
+    box-sizing: content-box;
+    border: 0px dashed;
+    color: rgb(122, 165, 42);
+    
+}
+.audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+    border: 2px solid #87cefa;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+audio {
+    width: 100%;
+    outline: none;
+    background-color: #87cefa;
+    border-radius: 10px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+    filter: brightness(1.2);
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #87ceeb;
+    border-radius: 10px;
+}
+
+.link {
+    text-align: center;
+    background-color: aquamarine;
+    border: 2px solid;
+    padding: 10px; 
+    margin: 0 auto; 
+    width: fit-content; 
+    border-radius: 15px;
+}
+
+
+.Happy {
+    background-color: rgb(40, 235, 235);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    border-top: 10px solid; 
+    margin: 0 auto; 
+    width: 90%; 
+    border-radius: 19px;
+    padding: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .Happy {
+        width: 95%; 
+        font-size: 18px; 
+        padding: 8px; 
+    }
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./muskan1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    width: 150px; 
+    height: 150px;
+    background-image: url('./muskan1.jpg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3; 
+    z-index: 2;
+}
+
+.header-content {
+    position: relative;
+    z-index: 3;
+}
+
+.header h1, .header p {
+    z-index: 3;
+    position: relative;
+}
+
+
+.footer {
+    text-align: justify;              
+    margin: 20px 12px;               
+    background-color: #bfcdb1;       
+    padding: 20px;                   
+    border-radius: 10px;              
+    font-family: 'Georgia', serif;  
+    color: #333;                
+    font-size:10 rem;               
+    line-height: 1.6;               
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.footer p {
+    margin: 10px 0;                  
+    text-indent: 20px;
+}
